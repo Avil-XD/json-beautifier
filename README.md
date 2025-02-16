@@ -17,7 +17,7 @@ A web-based tool that allows users to format and validate JSON data with an intu
 
 ## Usage
 
-1. Visit the [JSON Formatter & Validator](https://avil-xd.github.io/json-formatter-validator) website
+1. Visit the [JSON Formatter & Validator](https://avil-xd.github.io/json-beautifier/) website
 2. Paste your JSON into the text area using the Paste button or keyboard
 3. Click "Format" to beautify the JSON or "Validate" to check for errors
 4. Use keyboard shortcuts:
