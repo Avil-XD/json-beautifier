@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A client-side JSON formatter and validator tool">
+    <meta name="theme-color" content="#1e1e1e">
+    <title>JSON Formatter & Validator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>{ }</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>JSON Formatter & Validator</h1>
+            <p class="description">Format and validate JSON directly in your browser. All processing happens locally.</p>
+        </header>
+
+        <main class="editor-container" role="main">
+            <div class="editor-wrapper">
+                <div class="line-numbers" aria-hidden="true">1</div>
+                <div class="input-group">
+                    <textarea 
+                        id="jsonInput" 
+                        placeholder="Paste your JSON here..." 
+                        aria-label="JSON input area"
+                        spellcheck="false"
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        wrap="off"></textarea>
+                    <div class="cursor-position">Line: 1, Column: 1</div>
+                </div>
+            </div>
+
+            <div class="button-group" role="toolbar" aria-label="JSON operation controls">
+                <button 
+                    id="formatBtn" 
+                    class="btn primary" 
+                    aria-label="Format JSON">
+                    <span class="icon">⚡</span> Format
+                </button>
+                <button 
+                    id="validateBtn" 
+                    class="btn secondary" 
+                    aria-label="Validate JSON">
+                    <span class="icon">✓</span> Validate
+                </button>
+                <button
+                    id="copyBtn"
+                    class="btn purple"
+                    aria-label="Copy JSON">
+                    <span class="icon">⎘</span> Copy
+                </button>
+                <button
+                    id="pasteBtn"
+                    class="btn orange"
+                    aria-label="Paste JSON">
+                    <span class="icon">📋</span> Paste
+                </button>
+                <button
+                    id="clearBtn"
+                    class="btn clear"
+                    aria-label="Clear input">
+                    <span class="icon">×</span> Clear
+                </button>
+            </div>
+
+            <div id="errorContainer" 
+                class="message-container" 
+                role="alert" 
+                aria-live="polite"></div>
+        </main>
+
+        <footer class="footer">
+            <p>Keyboard shortcuts: Alt + F (Format), Alt + V (Validate), Alt + I (Paste), Alt + P (Copy), Alt + C (Clear)</p>
+        </footer>
+    </div>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

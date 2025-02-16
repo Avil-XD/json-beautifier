@@ -1,0 +1,323 @@
+:root {
+    --primary-bg: #1e1e1e;
+    --secondary-bg: #2d2d2d;
+    --text-color: #e0e0e0;
+    --accent-color: #007acc;
+    --error-color: #ff4444;
+    --success-color: #4caf50;
+    --border-radius: 8px;
+    --transition: 0.2s ease-in-out;
+    --key-color: #9cdcfe;
+    --string-color: #ce9178;
+    --number-color: #b5cea8;
+    --boolean-color: #569cd6;
+    --null-color: #569cd6;
+    --line-number-color: #858585;
+    --line-number-bg: #1e1e1e;
+    --selection-bg: #264f78;
+    --active-line-bg: #282828;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: #888;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.editor-container {
+    background-color: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.editor-wrapper {
+    position: relative;
+    margin-bottom: 1.5rem;
+    border: 2px solid #444;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-bg);
+}
+
+.line-numbers {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    padding: 1rem 0;
+    background-color: var(--line-number-bg);
+    border-right: 1px solid #444;
+    color: var(--line-number-color);
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: right;
+    user-select: none;
+    overflow: hidden;
+}
+
+.line-numbers span {
+    display: block;
+    padding-right: 8px;
+    color: var(--line-number-color);
+}
+
+.input-group {
+    margin-left: 50px;
+    position: relative;
+}
+
+#jsonInput {
+    width: 100%;
+    height: 400px;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 1rem;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+    tab-size: 4;
+    -moz-tab-size: 4;
+}
+
+#jsonInput:focus {
+    outline: none;
+}
+
+#jsonInput::selection {
+    background-color: var(--selection-bg);
+}
+
+.cursor-position {
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    color: var(--line-number-color);
+    font-size: 12px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    padding: 2px 8px;
+    background-color: var(--secondary-bg);
+    border-radius: 4px;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all var(--transition);
+}
+
+.btn:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+.btn .icon {
+    font-size: 1.2em;
+}
+
+.btn.primary {
+    background-color: var(--accent-color);
+}
+
+.btn.primary:hover {
+    background-color: #005999;
+}
+
+.btn.secondary {
+    background-color: var(--success-color);
+}
+
+.btn.secondary:hover {
+    background-color: #3d8b40;
+}
+
+.btn.purple {
+    background-color: #9c27b0;
+}
+
+.btn.purple:hover {
+    background-color: #7b1fa2;
+}
+
+.btn.orange {
+    background-color: #ff9800;
+}
+
+.btn.orange:hover {
+    background-color: #f57c00;
+}
+
+.btn.clear {
+    background-color: #666;
+}
+
+.btn.clear:hover {
+    background-color: #555;
+}
+
+.message-container {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.message-container.show {
+    display: block;
+}
+
+.message-container.error {
+    background-color: rgba(255, 68, 68, 0.1);
+    border: 1px solid var(--error-color);
+    color: var(--error-color);
+}
+
+.message-container.success {
+    background-color: rgba(76, 175, 80, 0.1);
+    border: 1px solid var(--success-color);
+    color: var(--success-color);
+}
+
+.error-context {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 68, 68, 0.1);
+    border-radius: var(--border-radius);
+    font-family: 'Consolas', 'Monaco', monospace;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+.suggestion {
+    margin-top: 0.5rem;
+    color: #ffa500;
+    font-style: italic;
+}
+
+.json-details {
+    margin-top: 0.5rem;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* VSCode-like selection styles */
+::selection {
+    background-color: var(--selection-bg);
+}
+
+/* Syntax Highlighting */
+.formatted-json {
+    font-family: 'Consolas', 'Monaco', monospace;
+    white-space: pre;
+    line-height: 1.5;
+}
+
+.json-key { color: var(--key-color); }
+.json-string { color: var(--string-color); }
+.json-number { color: var(--number-color); }
+.json-boolean { color: var(--boolean-color); }
+.json-null { color: var(--null-color); }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container { padding: 10px; }
+    .editor-container { padding: 1rem; }
+    h1 { font-size: 2rem; }
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    #jsonInput { height: 300px; }
+}
+
+@media (max-width: 480px) {
+    .button-group {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .line-numbers {
+        width: 40px;
+    }
+    .input-group {
+        margin-left: 40px;
+    }
+}
