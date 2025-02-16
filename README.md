@@ -1,111 +1,50 @@
-<p align="center">
-  <h1 align="center">JSON Beautifier</h1>
-  <p align="center">
-    An elegant, powerful JSON formatter and validator for developers
-    <br />
-    <a href="https://avil-xd.github.io/json-beautifier"><strong>Try it out »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/Avil-XD/json-beautifier/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Avil-XD/json-beautifier/issues">Request Feature</a>
-  </p>
-</p>
+<div align="center">
 
-## About The Project
+# 🎨 JSON Beautifier
 
-JSON Beautifier is a sophisticated web application designed for developers who need a reliable, fast, and intuitive tool for formatting and validating JSON data. Built with performance and user experience in mind, it offers a seamless interface for working with JSON structures of any complexity.
+**A fast, elegant JSON formatter and validator built for developers.**
 
-### Key Features
+[Try it Live](https://avil-xd.github.io/json-beautifier) · [Report Bug](https://github.com/Avil-XD/json-beautifier/issues) · [Request Feature](https://github.com/Avil-XD/json-beautifier/issues)
 
-- **Instant Formatting**: Transform unformatted JSON into beautifully structured, readable code
-- **Real-time Validation**: Immediate feedback on JSON syntax validity
-- **Modern Interface**: Clean, intuitive design optimized for productivity
-- **Performance**: Lightning-fast processing even with large JSON files
-- **Cross-platform**: Works on all modern browsers and devices
-- **Progressive Web App**: Available offline with PWA capabilities
-- **Dark Mode**: Eye-friendly dark theme support
-- **Keyboard Shortcuts**: Efficient workflow with keyboard controls
-- **Zero Dependencies**: Pure vanilla JavaScript implementation
+</div>
 
-## Getting Started
+---
 
-Access the tool instantly through your browser:
+## ✨ Features
 
-1. Visit [JSON Beautifier](https://avil-xd.github.io/json-beautifier)
-2. Input or paste your JSON data
-3. Use the buttons or keyboard shortcuts to format/validate
-4. Copy your beautifully formatted JSON
+- 🚀 **Instant Formatting** - One-click JSON beautification
+- ✅ **Live Validation** - Real-time syntax checking
+- 📊 **Smart Stats** - Line count, character count, root keys
+- 🎯 **Line Numbers** & cursor position tracking
+- ⌨️ **Column Selection** - Hold Alt for column select
+- 🌙 **Dark Mode** - Easy on the eyes
+- 📱 **PWA Support** - Works offline
 
-### Keyboard Shortcuts
+## ⌨️ Shortcuts
 
-For efficient workflow, the following shortcuts are available:
+| Action | Key |
+|--------|-----|
+| Format | `Alt + F` |
+| Validate | `Alt + V` |
+| Clear | `Alt + C` |
+| Copy | `Alt + P` |
+| Paste | `Alt + I` |
 
-| Action | Shortcut |
-|--------|----------|
-| Format JSON | `Alt + F` |
-| Validate JSON | `Alt + V` |
-| Clear Editor | `Alt + C` |
-| Copy JSON | `Alt + P` |
-| Paste JSON | `Alt + I` |
+## 💻 Tech Stack
 
-### Additional Features
+- Vanilla JavaScript
+- Modern CSS3
+- HTML5
+- Service Workers
 
-- Line numbering
-- Cursor position tracking
-- Column selection (hold Alt)
-- Error highlighting with detailed messages
-- JSON statistics (line count, character count, root keys)
+## 📝 License
 
-## Technical Details
+MIT License · [View License](LICENSE)
 
-### Built With
+---
 
-- HTML5 for semantic structure
-- CSS3 for modern styling
-- Vanilla JavaScript for core functionality
-- Service Workers for PWA capabilities
+<div align="center">
 
-### Performance
+Made with ❤️ by [Avil](https://github.com/Avil-XD)
 
-- Minimal bundle size (<50KB)
-- No external dependencies
-- Optimized for instant formatting
-- Efficient memory usage
-
-## Contributing
-
-We welcome contributions to improve JSON Beautifier! Here's how you can help:
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Development Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/Avil-XD/json-beautifier.git
-
-# Navigate to the project directory
-cd json-beautifier
-
-# Open index.html in your browser
-```
-
-## License
-
-Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
-
-## Contact & Support
-
-- Report bugs: [Issue Tracker](https://github.com/Avil-XD/json-beautifier/issues)
-- Follow me: [@Avil-XD](https://github.com/Avil-XD)
-
-## Acknowledgments
-
-- Inspired by the need for a lightweight, efficient JSON formatting tool
-- Built with modern web standards and best practices
-- Designed with developers' workflow in mind
+</div>
