@@ -37,7 +37,7 @@ git clone https://github.com/Avil-XD/json-beautifier.git
 
 2. Open the project directory:
 ```bash
-cd json-formatter-validator
+cd json-beautifier
 ```
 
 3. Open `index.html` in your browser or use a local server:
