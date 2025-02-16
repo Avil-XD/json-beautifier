@@ -34,18 +34,28 @@ Access the tool instantly through your browser:
 
 1. Visit [JSON Beautifier](https://avil-xd.github.io/json-beautifier)
 2. Input or paste your JSON data
-3. Click "Format" or use keyboard shortcuts
+3. Use the buttons or keyboard shortcuts to format/validate
 4. Copy your beautifully formatted JSON
 
 ### Keyboard Shortcuts
 
 For efficient workflow, the following shortcuts are available:
 
-| Action | Windows/Linux | macOS |
-|--------|--------------|--------|
-| Format JSON | `Ctrl + Enter` | `⌘ + Enter` |
-| Copy Formatted | `Ctrl + S` | `⌘ + S` |
-| Clear Editor | `Ctrl + L` | `⌘ + L` |
+| Action | Shortcut |
+|--------|----------|
+| Format JSON | `Alt + F` |
+| Validate JSON | `Alt + V` |
+| Clear Editor | `Alt + C` |
+| Copy JSON | `Alt + P` |
+| Paste JSON | `Alt + I` |
+
+### Additional Features
+
+- Line numbering
+- Cursor position tracking
+- Column selection (hold Alt)
+- Error highlighting with detailed messages
+- JSON statistics (line count, character count, root keys)
 
 ## Technical Details
 
