@@ -4,71 +4,35 @@ A web-based tool that allows users to format and validate JSON data with an intu
 
 ## Features
 
-**Core Functionality**
-- Format JSON with 2/4 space indentation
-- Validate JSON with detailed error highlighting
-- Syntax highlighting for JSON structures
-- Tree view visualization for complex JSON
-
-**UX Features**
-- Light/dark theme toggle (system-aware)
-- Responsive design with mobile-first approach
-- Accessible interface with ARIA labels
-- Interactive error panel with line numbers
-- Smart auto-formatting on paste
-
-**Productivity**
-- Keyboard shortcuts:
-  - Ctrl+Alt+F: Format JSON
-  - Ctrl+Alt+V: Validate JSON
-  - Ctrl+Alt+P: Copy formatted JSON
-  - Ctrl+Alt+C: Clear input
-- History stack (last 10 entries)
-- Full clipboard support (text/images/files)
-
-**PWA Features**
-- Offline functionality via service worker
-- Installable as native app
-- Automatic updates
-- Network resilience strategies
+- Format JSON with proper indentation
+- Validate JSON and display detailed error messages
+- Modern dark theme interface
+- Keyboard shortcuts support
+- Responsive design for all devices
+- Copy/Paste functionality with dedicated buttons
+- User-friendly error messages and suggestions
+- Accessible design with ARIA support
+- Progressive Web App (PWA) support
+- Offline functionality
 
 ## Usage
 
-**Web Version**
-🌐 [Live Demo](https://avil-xd.github.io/json-formatter-validator)
-
-**Local Installation**
-```bash
-git clone https://github.com/Avil-XD/json-formatter-validator.git
-cd json-formatter-validator
-```
-
-**Keyboard Shortcuts**
-- Ctrl + Alt + F: Format JSON
-- Ctrl + Alt + V: Validate JSON
-- Ctrl + Alt + P: Copy formatted JSON
-- Ctrl + Alt + Backspace: Clear input
-
-**Basic Flow**
-1. Input JSON via:
-   - Direct typing
-   - File upload (drag & drop supported)
-   - Clipboard paste (Ctrl+V)
-2. Choose formatting options:
-   - Indentation: 2/4 spaces
-   - Compact/expanded mode
-   - Sort keys alphabetically
-3. Click/toggle between:
-   - Format (beautify)
-   - Validate (with error highlighting)
-   - Export (copy/download)
+1. Visit the [JSON Formatter & Validator](https://avil-xd.github.io/json-formatter-validator) website
+2. Paste your JSON into the text area using the Paste button or keyboard
+3. Click "Format" to beautify the JSON or "Validate" to check for errors
+4. Use keyboard shortcuts:
+   - Alt + F: Format JSON
+   - Alt + V: Validate JSON
+   - Alt + P: Copy to clipboard
+   - Alt + V: Paste from clipboard
+   - Alt + C: Clear input
 5. Use the Copy/Paste buttons to transfer JSON between applications
 
 ## Local Development
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Avil-XD/json-formatter-validator.git
+git clone https://github.com/Avil-XD/json-beautifier.git
 ```
 
 2. Open the project directory:
@@ -87,23 +51,11 @@ npx serve
 
 ## Technologies Used
 
-**Core Stack**
-- HTML5 Semantic Elements
-- CSS3 (Flexbox/Grid)
-- JavaScript ES2022
-- Service Workers (sw.js)
-- Web App Manifest
-
-**Key APIs**
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Progressive Web App technologies
 - Clipboard API
-- File System Access API
-- IndexedDB (offline storage)
-- Web Share API
-
-**Tooling**
-- Lighthouse CI (PWA optimization)
-- Workbox (service worker toolkit)
-- Prettier (code formatting)
 
 ## Contributing
 
