@@ -1,50 +1,118 @@
-<div align="center">
+# JSON Formatter & Validator
 
-# 🎨 JSON Beautifier
+A web-based tool that allows users to format and validate JSON data with an intuitive interface.
 
-**A fast, elegant JSON formatter and validator built for developers.**
+## Features
 
-[Try it Live](https://avil-xd.github.io/json-beautifier) · [Report Bug](https://github.com/Avil-XD/json-beautifier/issues) · [Request Feature](https://github.com/Avil-XD/json-beautifier/issues)
+**Core Functionality**
+- Format JSON with 2/4 space indentation
+- Validate JSON with detailed error highlighting
+- Syntax highlighting for JSON structures
+- Tree view visualization for complex JSON
 
-</div>
+**UX Features**
+- Light/dark theme toggle (system-aware)
+- Responsive design with mobile-first approach
+- Accessible interface with ARIA labels
+- Interactive error panel with line numbers
+- Smart auto-formatting on paste
 
----
+**Productivity**
+- Keyboard shortcuts:
+  - Ctrl+Alt+F: Format JSON
+  - Ctrl+Alt+V: Validate JSON
+  - Ctrl+Alt+P: Copy formatted JSON
+  - Ctrl+Alt+C: Clear input
+- History stack (last 10 entries)
+- Full clipboard support (text/images/files)
 
-## ✨ Features
+**PWA Features**
+- Offline functionality via service worker
+- Installable as native app
+- Automatic updates
+- Network resilience strategies
 
-- 🚀 **Instant Formatting** - One-click JSON beautification
-- ✅ **Live Validation** - Real-time syntax checking
-- 📊 **Smart Stats** - Line count, character count, root keys
-- 🎯 **Line Numbers** & cursor position tracking
-- ⌨️ **Column Selection** - Hold Alt for column select
-- 🌙 **Dark Mode** - Easy on the eyes
-- 📱 **PWA Support** - Works offline
+## Usage
 
-## ⌨️ Shortcuts
+**Web Version**
+🌐 [Live Demo](https://avil-xd.github.io/json-formatter-validator)
 
-| Action | Key |
-|--------|-----|
-| Format | `Alt + F` |
-| Validate | `Alt + V` |
-| Clear | `Alt + C` |
-| Copy | `Alt + P` |
-| Paste | `Alt + I` |
+**Local Installation**
+```bash
+git clone https://github.com/Avil-XD/json-formatter-validator.git
+cd json-formatter-validator
+```
 
-## 💻 Tech Stack
+**Keyboard Shortcuts**
+- Ctrl + Alt + F: Format JSON
+- Ctrl + Alt + V: Validate JSON
+- Ctrl + Alt + P: Copy formatted JSON
+- Ctrl + Alt + Backspace: Clear input
 
-- Vanilla JavaScript
-- Modern CSS3
-- HTML5
-- Service Workers
+**Basic Flow**
+1. Input JSON via:
+   - Direct typing
+   - File upload (drag & drop supported)
+   - Clipboard paste (Ctrl+V)
+2. Choose formatting options:
+   - Indentation: 2/4 spaces
+   - Compact/expanded mode
+   - Sort keys alphabetically
+3. Click/toggle between:
+   - Format (beautify)
+   - Validate (with error highlighting)
+   - Export (copy/download)
+5. Use the Copy/Paste buttons to transfer JSON between applications
 
-## 📝 License
+## Local Development
 
-MIT License · [View License](LICENSE)
+1. Clone the repository:
+```bash
+git clone https://github.com/Avil-XD/json-formatter-validator.git
+```
 
----
+2. Open the project directory:
+```bash
+cd json-formatter-validator
+```
 
-<div align="center">
+3. Open `index.html` in your browser or use a local server:
+```bash
+# Using Python 3
+python -m http.server
 
-Made with ❤️ by [Avil](https://github.com/Avil-XD)
+# Using Node.js
+npx serve
+```
 
-</div>
+## Technologies Used
+
+**Core Stack**
+- HTML5 Semantic Elements
+- CSS3 (Flexbox/Grid)
+- JavaScript ES2022
+- Service Workers (sw.js)
+- Web App Manifest
+
+**Key APIs**
+- Clipboard API
+- File System Access API
+- IndexedDB (offline storage)
+- Web Share API
+
+**Tooling**
+- Lighthouse CI (PWA optimization)
+- Workbox (service worker toolkit)
+- Prettier (code formatting)
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
