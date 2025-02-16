@@ -28,7 +28,7 @@ A web-based tool that allows users to format and validate JSON data with an intu
    - Alt + F: Format JSON
    - Alt + V: Validate JSON
    - Alt + P: Copy to clipboard
-   - Alt + V: Paste from clipboard
+   - Alt + I: Paste from clipboard
    - Alt + C: Clear input
 4. Use the Copy/Paste buttons to transfer JSON between applications
 
